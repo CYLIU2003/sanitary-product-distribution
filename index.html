@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OITERU 利用ガイド - スマートナプキン提供システム</title>
-    <meta name="description" content="ICカードをかざすだけで生理用品が受け取れるスマートシステム「OITERU」の利用ガイドです。">
+    <title>OITERU テスト運用のお知らせ</title>
+    <meta name="description" content="1号館2階の化粧室で、ICカードをかざすだけで生理用品が受け取れる「OITERU」のテスト運用を実施中です。">
     <style>
         :root {
             --primary-color: #ec4899; /* OITERU Pink */
@@ -251,6 +251,26 @@
             text-decoration: underline;
         }
 
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .info-item {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 1rem 1.2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .info-item strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -271,22 +291,46 @@
             .faq-a { margin-left: 0; margin-top: 0.5rem; padding-left: 2rem; }
         }
     </style>
+    </style>
 </head>
+<body>
     <header>
         <div class="container">
             <h1>🍬 OITERU（オイテル）</h1>
-            <div class="subtitle">学生・教職員の皆様へ<br>ICカードをかざすだけで、ナプキンを無料で。</div>
+            <div class="subtitle">学生・教職員の皆様へ<br>テスト運用のお知らせ</div>
         </div>
     </header>
 
     <div class="container">
         <div class="intro-box">
             <p class="intro-text">
-                1号館2階の化粧室にて、ICカードをかざすだけで生理用品（ナプキン）を受け取れるシステム<br>
+                1号館2階の化粧室にて、ICカードをかざすだけで生理用品（ナプキン）を受け取れる
                 「OITERU（オイテル）」のテスト運用を開始しました。<br>
                 「急に必要になった」「持ち合わせがない」という時に、どなたでも気兼ねなくご利用いただけます。
             </p>
         </div>
+
+        <section>
+            <h2>📌 概要</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>対象</strong>
+                    <p>学生・教職員の皆様</p>
+                </div>
+                <div class="info-item">
+                    <strong>設置場所</strong>
+                    <p>1号館 2階 中央化粧室</p>
+                </div>
+                <div class="info-item">
+                    <strong>設置期間</strong>
+                    <p>1/22(木) ～ 1/28(木) の平日</p>
+                </div>
+                <div class="info-item">
+                    <strong>利用方法</strong>
+                    <p>学生証（または社員証）をかざすだけ</p>
+                </div>
+            </div>
+        </section>
 
     <section>
         <h2>✨ テスト運用の詳細</h2>
@@ -340,12 +384,12 @@
         
         <div class="faq-item">
             <div class="faq-q">利用料はかかりますか？</div>
-            <div class="faq-a">基本的に無料です（※設置元の運用方針によります）。</div>
+            <div class="faq-a">テスト運用期間中は無料でご利用いただけます。</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-q">1日に何個でももらえますか？</div>
-            <div class="faq-a">多くの人に利用していただくため、1人あたり<strong>毎週「2個」</strong>が設定されています。上限を超えると排出されません。</div>
+            <div class="faq-q">利用回数に制限はありますか？</div>
+            <div class="faq-a">テスト運用中は状況に応じて運用ルールを調整する場合があります。必要な時にご利用ください。</div>
         </div>
 
         <div class="faq-item">
@@ -363,9 +407,7 @@
         <div class="faq-item">
             <div class="faq-q">自分の利用履歴を確認したい</div>
             <div class="faq-a">
-                設置されている<strong>専用端末（登録機器）でのみ</strong>確認が可能です。<br>
-                端末の「利用状況を確認する」画面にてカードをかざしてください。<br>
-                <small>※個人のスマートフォン等からは確認できません。</small>
+                利用履歴は統計情報としてのみ管理されます。個人の特定や追跡は行いません。
             </div>
         </div>
     </section>
