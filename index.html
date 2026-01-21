@@ -324,12 +324,14 @@
             text-align: center;
         }
 
-        .installation-svg {
+        .installation-photo {
             width: 100%;
-            max-width: 360px;
+            max-width: 600px;
             height: auto;
             margin: 0 auto;
             display: block;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .installation-caption {
@@ -451,21 +453,9 @@
     <section class="installation-section" id="installation">
         <h2>📷 設置イメージ</h2>
         <figure class="installation-figure">
-            <svg class="installation-svg" viewBox="0 0 360 260" role="img" aria-labelledby="installation-title">
-                <title id="installation-title">中央化粧室に設置されたOITERU端末のイメージ</title>
-                <rect x="50" y="160" width="260" height="20" fill="#e2e8f0" />
-                <rect x="120" y="60" width="120" height="35" rx="10" fill="#0f172a" />
-                <rect x="140" y="70" width="80" height="25" rx="8" fill="#38bdf8" />
-                <rect x="90" y="110" width="180" height="140" rx="18" fill="#c7f7ee" stroke="#66c2b8" stroke-width="4" />
-                <rect x="110" y="130" width="140" height="20" rx="6" fill="#0f172a" />
-                <rect x="130" y="220" width="100" height="10" rx="5" fill="#f8fafc" />
-                <circle cx="190" cy="190" r="14" fill="#1d4ed8" />
-                <path d="M220 140 L260 130 L250 138" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" />
-                <rect x="30" y="150" width="30" height="80" fill="#f0fdfa" />
-                <rect x="50" y="150" width="10" height="80" fill="#d9f99d" />
-            </svg>
+            <img src="image/jitsubutsu.jpg" alt="1号館2階中央化粧室に設置されたOITERU端末の実物写真" class="installation-photo" loading="lazy">
             <figcaption class="installation-caption">
-                カウンター型の端末を壁際に据え、学生証をかざすだけでナプキンが出てくるシンプルな設計です。
+                1号館2階中央化粧室に設置されたOITERU端末。カウンター上に設置され、学生証をかざすだけで利用できます。
             </figcaption>
         </figure>
     </section>
