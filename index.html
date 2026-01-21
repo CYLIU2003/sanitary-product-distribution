@@ -7,14 +7,15 @@
     <meta name="description" content="1号館2階の化粧室で、ICカードをかざすだけで生理用品が受け取れる「OITERU」のテスト運用を実施中です。">
     <style>
         :root {
-            --primary-color: #ec4899; /* OITERU Pink */
-            --primary-light: #fce7f3;
-            --text-color: #333;
-            --bg-color: #f9fafb;
+            --primary-color: #f59e0b; /* Warm Amber */
+            --primary-light: #fef3c7;
+            --secondary-color: #fb923c; /* Warm Orange */
+            --text-color: #292524;
+            --bg-color: #fffbeb;
             --card-bg: #ffffff;
-            --border-radius: 12px;
-            --accent-blue: #3b82f6;
-            --accent-blue-bg: #eff6ff;
+            --border-radius: 16px;
+            --accent-warm: #ea580c;
+            --accent-warm-bg: #ffedd5;
         }
 
         body {
@@ -71,13 +72,13 @@
 
         /* Intro Box */
         .intro-box {
-            background: linear-gradient(135deg, #fff0f7 0%, #ffffff 100%);
-            border: 1px solid #fbcfe8;
+            background: linear-gradient(135deg, #fef3c7 0%, #ffffff 100%);
+            border: 2px solid #fbbf24;
             border-radius: var(--border-radius);
-            padding: 2rem;
-            margin-bottom: 2.5rem;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.1);
+            box-shadow: 0 4px 20px rgba(251, 146, 60, 0.15);
         }
 
         .intro-text {
@@ -87,44 +88,15 @@
             color: #444;
         }
 
-        .hero-panel {
-            background: white;
-            border-radius: var(--border-radius);
-            border: 1px solid #eee;
-            padding: 2rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-            display: grid;
-            gap: 1.25rem;
-        }
-
-        .hero-panel p {
-            margin: 0;
-            font-size: 1rem;
-            color: #3c3c3c;
-        }
-
-        .hero-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 0.75rem;
-        }
-
-        .hero-pill {
-            background: var(--accent-blue-bg);
-            border: 1px solid var(--accent-blue);
-            border-radius: 10px;
-            padding: 0.75rem 1rem;
-            font-size: 0.95rem;
-            color: #1e3a8a;
-            font-weight: 600;
-        }
-
-        .hero-pill span {
-            display: block;
-            font-size: 0.85rem;
-            color: #334155;
-            font-weight: normal;
+        .highlight-text {
+            background: var(--accent-warm-bg);
+            border-left: 4px solid var(--accent-warm);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #78350f;
         }
 
         /* Steps */
@@ -168,46 +140,49 @@
 
         /* Note Box */
         .note {
-            background-color: var(--accent-blue-bg);
-            border-left: 4px solid var(--accent-blue);
-            padding: 1rem;
+            background-color: var(--accent-warm-bg);
+            border-left: 4px solid var(--accent-warm);
+            padding: 1.25rem;
             margin: 1rem 0;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95rem;
+            border-radius: 0 12px 12px 0;
+            font-size: 1rem;
         }
 
         .note strong {
-            color: #1d4ed8;
+            color: var(--accent-warm);
             display: block;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
-        /* Privacy Grid */
-        .privacy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .privacy-item {
+        /* Privacy Section */
+        .privacy-content {
             background: white;
-            padding: 1.5rem;
+            border: 2px solid var(--primary-light);
             border-radius: var(--border-radius);
-            text-align: center;
-            border: 1px solid #eee;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            transition: transform 0.2s;
+            padding: 2rem;
+            line-height: 1.9;
         }
 
-        .privacy-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        .privacy-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
         }
 
-        .privacy-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
+        .privacy-content li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .privacy-content li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         /* FAQ */
@@ -291,24 +266,24 @@
             text-decoration: underline;
         }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-        }
-
-        .info-item {
+        .info-summary {
             background: white;
-            border: 1px solid #eee;
+            border: 2px solid var(--primary-light);
             border-radius: var(--border-radius);
-            padding: 1rem 1.2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
         }
 
-        .info-item strong {
+        .info-summary p {
+            margin: 0.75rem 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .info-summary strong {
             color: var(--primary-color);
-            display: block;
-            margin-bottom: 0.4rem;
+            font-weight: 700;
         }
 
         .installation-section {
@@ -358,8 +333,8 @@
             .step-item { padding-left: 0; margin-top: 4rem; }
             .step-item::before { top: -3.5rem; left: 0; }
             .faq-a { margin-left: 0; margin-top: 0.5rem; padding-left: 2rem; }
-            .hero-panel { padding: 1.5rem; }
-            .hero-list { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+            .info-summary { padding: 1.5rem; }
+            .privacy-content { padding: 1.5rem; }
         </style>
 </head>
 <body>
@@ -379,50 +354,13 @@
             </p>
         </div>
 
-        <section class="hero-panel" aria-label="OITERUのすぐに使えるポイント">
-            <p>
-                1/22(木)～1/28(木)の平日、1号館2階中央化粧室にてテスト運用中。
-                学生証・社員証をかざすだけで、必要な時にすぐ受け取れます。
-            </p>
-            <div class="hero-list">
-                <div class="hero-pill">
-                    <strong>ICカードをタッチ</strong>
-                    <span>登録・アプリ不要で何度でもかざすだけ。</span>
-                </div>
-                <div class="hero-pill">
-                    <strong>プライバシー優先</strong>
-                    <span>利用履歴は統計情報としてのみ使用します。</span>
-                </div>
-                <div class="hero-pill">
-                    <strong>いつでも準備</strong>
-                    <span>平日なら何時でも化粧室で利用可能です。</span>
-                </div>
-                <div class="hero-pill">
-                    <strong>テスト運用</strong>
-                    <span>ご意見はアンケートまたは担当窓口へ。</span>
-                </div>
-            </div>
-        </section>
-
         <section>
             <h2>📌 概要</h2>
-            <div class="info-grid">
-                <div class="info-item">
-                    <strong>対象</strong>
-                    <p>学生・教職員の皆様</p>
-                </div>
-                <div class="info-item">
-                    <strong>設置場所</strong>
-                    <p>1号館 2階 中央化粧室</p>
-                </div>
-                <div class="info-item">
-                    <strong>設置期間</strong>
-                    <p>1/22(木) ～ 1/28(木) の平日</p>
-                </div>
-                <div class="info-item">
-                    <strong>利用方法</strong>
-                    <p>学生証（または社員証）をかざすだけ</p>
-                </div>
+            <div class="info-summary">
+                <p><strong>📅 設置期間：</strong>1/22(木) ～ 1/28(木) の平日</p>
+                <p><strong>📍 設置場所：</strong>1号館 2階 中央化粧室</p>
+                <p><strong>🎫 利用方法：</strong>学生証または社員証をかざすだけ（登録・アプリ不要）</p>
+                <p><strong>👥 対象：</strong>学生・教職員の皆様どなたでも</p>
             </div>
         </section>
 
@@ -462,24 +400,13 @@
 
     <section>
         <h2>🔒 プライバシーについて</h2>
-        <p>皆様に安心してご利用いただくため、個人の特定や追跡は行いません。</p>
-
-        <div class="privacy-grid">
-            <div class="privacy-item">
-                <span class="privacy-icon">📊</span>
-                <strong>統計情報として管理</strong>
-                <p>利用履歴は統計情報としてのみ管理されます。</p>
-            </div>
-            <div class="privacy-item">
-                <span class="privacy-icon">🙈</span>
-                <strong>個人の特定なし</strong>
-                <p>どなたが利用したかなどの個人情報の収集・追跡は行いません。</p>
-            </div>
-            <div class="privacy-item">
-                <span class="privacy-icon">🛡️</span>
-                <strong>安心のご利用</strong>
-                <p>プライバシーに配慮した設計となっておりますので、安心してご利用ください。</p>
-            </div>
+        <div class="privacy-content">
+            <p>皆様に安心してご利用いただくため、以下の点に配慮しています：</p>
+            <ul>
+                <li>利用履歴は統計情報としてのみ管理され、個人の特定は行いません</li>
+                <li>誰が利用したかなどの個人情報の収集・追跡は一切行いません</li>
+                <li>プライバシーを最優先に考えた設計で、安心してご利用いただけます</li>
+            </ul>
         </div>
     </section>
 
